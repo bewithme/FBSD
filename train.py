@@ -109,8 +109,8 @@ for epoch in range(0, HyperParams['epoch']):
         train_loss3 += loss3.item()
         train_loss4 += concat_loss.item()
 
-        if batch_idx % 50 == 0:
-            print(
+
+        print(
                 'Step: %d | Loss1: %.3f | Loss2: %.5f | Loss3: %.5f | Loss_concat: %.5f | Loss: %.3f | Acc: %.3f%% (%d/%d)' % (
                     batch_idx, train_loss1 / (batch_idx + 1), train_loss2 / (batch_idx + 1),
                     train_loss3 / (batch_idx + 1), train_loss4 / (batch_idx + 1), train_loss / (batch_idx + 1),
